@@ -2,7 +2,11 @@ add_library(Core STATIC)
 
 target_sources(Core 
   PRIVATE
-    Core.cpp
+    Renderer.cpp
+    VertexBuffer.cpp
+    IndexBuffer.cpp
+    VertexArray.cpp
+    Shader.cpp
 )
 target_include_directories(Core PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
 

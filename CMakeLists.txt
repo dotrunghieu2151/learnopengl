@@ -31,3 +31,14 @@ add_subdirectory(App)
 include(CTest)
 enable_testing()
 
+# sym link assets
+set (assetSource "${CMAKE_SOURCE_DIR}/Assets")
+set (assetDest "${CMAKE_BINARY_DIR}/Assets")
+
+add_custom_target(assets
+        COMMAND ${CMAKE_COMMAND} -E make_directory ${assetDest}
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${assetSource} ${assetDest}
+        COMMENT "copying Assets: ${assetSource} to ${assetDest}"
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+)
+add_dependencies(skillup assets)
