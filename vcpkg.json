@@ -3,14 +3,24 @@
   "version": "10.1.1",
   "description": "",
   "license": "MIT",
+  "builtin-baseline": "2b665df62f1ccc5dead7f1c93888bfe30a918363",
   "dependencies": [
-    { "name": "glew", "version>=": "2.2.0#3" },
-    { "name": "glfw3", "version>=": "3.4" },
+    {
+      "name": "glew",
+      "version>=": "2.2.0#3"
+    },
+    {
+      "name": "glfw3",
+      "version>=": "3.4"
+    },
     {
       "name": "imgui",
       "features": ["glfw-binding", "opengl3-binding"],
       "version>=": "1.90.7"
+    },
+    {
+      "name": "glm",
+      "version>=": "1.0.1#2"
     }
-  ],
-  "builtin-baseline": "2b665df62f1ccc5dead7f1c93888bfe30a918363"
+  ]
 }
